@@ -114,6 +114,75 @@ h2
 
 
 
+.hottitle
+	+susy-breakpoint($breakpoint_pad, $pad)
+		+container
+		width: 100%
+		padding: 10px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 30px
+		border-bottom: 1px solid #f0f0f0
+		position: relative
+		.tt-t
+			display: flex
+
+			justify-content: flex-start			
+			align-items: center
+			.hoticon
+				margin-right: 10px
+				i 
+					font-size: 25px
+			h4 
+				font-size: 25px
+				margin-right: 20px
+				color: #555
+			h5 
+				font-size: 14px
+				color: #888
+		.switch
+			position: absolute
+			width: 100px
+			text-align: right
+			right: 10px
+			a 
+				font-size: 12px
+				color: #900
+	+susy-breakpoint($breakpoint_desktop, $desktop)
+		+container
+		width: 100%
+		padding: 10px 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 18px
+		border-bottom: 1px solid #f0f0f0
+		position: relative
+		.tt-t
+			display: flex
+			justify-content: flex-start			
+			align-items: center
+			.hoticon
+				margin-right: 10px
+				i 
+					font-size: 25px
+			h4 
+				font-size: 25px
+				margin-right: 20px
+				color: #555
+			h5 
+				font-size: 13px
+				color: #888
+		.switch
+			position: absolute
+			width: 100px
+			text-align: right
+			right: 10px
+			a 
+				font-size: 12px
+				color: #900
+
 
 .tt-title
 	+susy-breakpoint($breakpoint_pad, $pad)
@@ -220,9 +289,6 @@ h2
 			margin-right: 10px
 			margin-left: 10px
 			color: #888 
-
-
-
 
 
 
@@ -519,7 +585,6 @@ header
 
 
 .search_section
-	
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
 		
@@ -527,6 +592,7 @@ header
 
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
+		margin-bottom: 40px	
 		.search_item
 			+span(12)
 			background: #f5f5f5
@@ -695,7 +761,6 @@ header
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
 		margin-top: 40px
-
 		.onlinedisplay_content
 			+span(3)
 			padding: 0 15px
@@ -719,6 +784,7 @@ header
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
 		margin-top: 40px
+		margin-bottom: 40px
 
 		.onlinedisplay_content
 			+span(2)
@@ -747,10 +813,12 @@ header
 
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
+
 		.section_a
 			+span(4)
-			height: 400px
 			padding: 0 10px
+			border: 1px solid #e0e0e0
+
 			// background: #920
 			.localmemo
 				.date
@@ -771,7 +839,7 @@ header
 						margin-right: 15px
 
 					.local_descript
-						font-size: 13px
+						font-size: 14px
 						color: #999
 
 			.newsvideo
@@ -789,7 +857,7 @@ header
 						margin-right: 15px
 
 					.newsvideo_descript
-						font-size: 13px
+						font-size: 14px
 						color: #999
 
 			.todaycharacter
@@ -798,15 +866,21 @@ header
 				flex-direction: column
 				justify-content: center
 				align-items: center
-				img 
-					width: 60%
-					border-radius: 50%
-					margin-bottom: 10px
-				h6 
-					font-size: 16px
-					margin-bottom: 5px
-					color: #555
-					font-weight: 500
+				.p_id
+					display: flex
+					flex-direction: row
+					justify-content: flex-start
+					align-items: center
+					margin-bottom: 20px
+					img 
+						width: 45%
+						border-radius: 50%
+						margin-right: 20px
+					h6 
+						font-size: 16px
+						margin-bottom: 5px
+						color: #555
+						font-weight: 500
 				p 
 					font-size: 14px
 					color: #888
@@ -819,82 +893,6 @@ header
 
 
 
-
-
-
-.hottitle
-	+susy-breakpoint($breakpoint_pad, $pad)
-		+container
-		width: 100%
-		padding: 10px
-		margin-top: 30px
-		display: flex
-		justify-content: space-between
-		align-items: center
-		margin-bottom: 30px
-		border-bottom: 1px solid #f0f0f0
-		position: relative
-		.tt-t
-			display: flex
-
-			justify-content: flex-start			
-			align-items: center
-			.hoticon
-				margin-right: 10px
-				i 
-					font-size: 25px
-			h4 
-				font-size: 25px
-				margin-right: 20px
-				color: #555
-			h5 
-				font-size: 14px
-				color: #888
-		.switch
-			position: absolute
-			width: 100px
-			text-align: right
-			right: 10px
-			a 
-				font-size: 12px
-				color: #900
-
-
-
-	+susy-breakpoint($breakpoint_desktop, $desktop)
-		+container
-		width: 100%
-		padding: 10px 20px
-		margin-top: 40px
-		display: flex
-		justify-content: space-between
-		align-items: center
-		margin-bottom: 18px
-		border-bottom: 1px solid #f0f0f0
-		position: relative
-		.tt-t
-			display: flex
-			justify-content: flex-start			
-			align-items: center
-			.hoticon
-				margin-right: 10px
-				i 
-					font-size: 25px
-			h4 
-				font-size: 25px
-				margin-right: 20px
-				color: #555
-			h5 
-				font-size: 13px
-				color: #888
-		.switch
-			position: absolute
-			width: 100px
-			text-align: right
-			right: 10px
-			a 
-				font-size: 12px
-				color: #900
 
 
 
