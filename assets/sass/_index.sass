@@ -4,21 +4,6 @@
 
 
 
-
-
-
-.clear
-	clear: both
-
-.clearfix:before,.clearfix:after
-	content: ""		
-	display: table
-.clearfix:after
-	clear: both
-.clearfix
-	zoom: 1 /* ie 6/7 */
-
-
 // shorthand
 $desktop: 12 (75px 20px) split
 $pad: 6 (80px 40px) split
@@ -33,25 +18,7 @@ $breakpoint_pad: 0 863px
 $breakpoint_show_bird: 1300px
 $breakpoint_no_bird: 0 1299px
 
-
-
 $susy: (debug: (image: hide))
-
-
-
-h1
-	font-size: 30px
-	text-align: center
-	line-height: 1.4
-	margin-bottom: 30px
-	margin-top: 30px
-h2
-	font-size: 20px
-	text-align: center
-	line-height: 1.4
-	margin-bottom: 20px
-	color: #888
-
 
 
 .hamburg-open
@@ -813,11 +780,10 @@ header
 
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
-
+		margin-bottom: 40px
 		.section_a
 			+span(4)
 			padding: 0 10px
-			border: 1px solid #e0e0e0
 
 			// background: #920
 			.localmemo
@@ -914,22 +880,15 @@ header
 
 .footer_wrapper
 	width: 100%
-	background: url('../img/flim.png') #000
+	background: #6c7c92
 	background-repeat: repeat-x
-	padding-top: 80px
+	padding-top: 20px
 
 footer
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
 		padding: 0 20px
-		.footer_info
-			// border-bottom: 1px solid #444
-			padding: 20px 0
-			p 
-				margin: 0 20px
-				font-size: 16px
-				color: #FFF
-				margin-bottom: 10px
+
 		.relatedlinks
 			margin-bottom: 20px
 			margin-top: 20px
@@ -947,7 +906,7 @@ footer
 				display: block
 				float: left
 				margin-right: 35px
-				color: #70d7e3
+				color: #FFF
 				font-size: 16px
 				margin-bottom: 13px
 		.copyright
@@ -964,16 +923,7 @@ footer
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
 		padding: 0 20px
-		.footer_info
-			display: flex
-			justify-content: center			
-			align-items: center
-			border-bottom: 1px solid #444
-			padding: 20px 0
-			p 
-				margin: 0 20px
-				font-size: 16px
-				color: #FFF
+
 		.relatedlinks
 			margin-bottom: 20px
 			margin-top: 20px
@@ -1000,7 +950,7 @@ footer
 			margin-top: 30px
 			a 
 				margin-right: 35px
-				color: #70d7e3
+				color: #FFF
 				font-size: 16px
 
 
