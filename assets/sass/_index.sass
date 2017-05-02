@@ -376,13 +376,12 @@ header
 	+susy-breakpoint($breakpoint_desktop, $w_desktop)
 		+container
 		height: 180px
-		background: #eee
+		background: url("../img/header_bg.jpg")
 		padding-left: 20px
 		display: flex
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		margin-bottom: 20px
 		.logo
 			width: 250px
 			display: flex
@@ -407,17 +406,19 @@ header
 					position: relative  
 					a 
 						display: block
-						height: 40px
+						height: 36px
 						color: #777
-						border-bottom: 3px solid #eee
-						font-size: 18px
-						padding: 0 20px
+						font-weight: 700
+						border: 1px solid none
+						font-size: 16px
+						padding: 0 18px
 						display: flex
 						justify-content: center
 						align-items: center
 						transition: all .3s  
 						&:hover
-							border-bottom: 3px solid #bc521a
+							color: #900
+							// transform: scale(1.02)
 					
 		.login_section
 			width: 150px
@@ -460,6 +461,7 @@ header
 
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
+		margin-top: 20px
 		.slider-desktop
 			+span(8)
 			.flexslider
@@ -556,22 +558,22 @@ header
 		
 
 
-	+susy-breakpoint($breakpoint_desktop, $desktop)
+	+susy-breakpoint($breakpoint_desktop, $w_desktop)
 		+container
 		margin-bottom: 40px	
 		.search_item
-			+span(12)
-			background: #f5f5f5
-			padding: 15px 0
+			background: url('../img/sbg.jpg') center bottom
+			padding: 35px 0 25px 0
 			display: flex
 			flex-direction: column
 			justify-content: center
 			align-items: center
+			border-top: 3px solid #db8f1a
 			p 
-				font-size: 13px
-				color: #888
+				font-size: 12px
+				color: #c0c0c0
 			.search_go
-				width: 100%
+				width: 50%
 				margin-bottom: 5px
 				display: flex
 				flex-direction: row
@@ -583,12 +585,11 @@ header
 				.serach_icon
 					width: 50px
 					height: 40px
-					background: #019
 					display: flex
 					flex-direction: row
 					justify-content: center
 					align-items: center
-					background: #be5108
+					background: #9c0007
 					cursor: pointer
 					i 
 						color: #FFF
