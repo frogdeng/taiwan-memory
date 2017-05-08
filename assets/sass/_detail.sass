@@ -59,7 +59,9 @@ $susy: (debug: (image: hide))
 					flex: 1 0 200px
 					p 
 						font-size: 14px
-						color: #888	
+						color: #888
+						word-wrap: break-word
+						word-break: break-all
 
 		.detail_photos
 			+span(5)
@@ -102,7 +104,7 @@ $susy: (debug: (image: hide))
 			display: flex
 			justify-content: flex-start			
 			align-items: center
-			height: 45px
+			
 			.detail-th
 				flex: 0 0 150px
 				width: 150px
@@ -113,12 +115,25 @@ $susy: (debug: (image: hide))
 				color: #555
 			.detail-td
 				flex: 1 0 200px
+				padding: 8px 0
 				p 
 					font-size: 14px
-					color: #888	
+					color: #888
+
 				a 
 					font-size: 14px
 					color: #ed7000
+					display: block
+					float: left
+					padding: 5px 10px
+					background: #f1f1f1
+					border: 1px solid #FFF
+					margin-right: 5px
+					margin-bottom: 5px
+					transition: all .3s
+					&:hover
+						background: #ed7000
+						color: #FFF
 
 		.bottom_detail_tag
 			margin-top: 20px

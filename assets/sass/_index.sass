@@ -261,8 +261,9 @@ $susy: (debug: (image: hide))
 header
 	+susy-breakpoint($breakpoint_pad, $w_pad)
 		+container
-		height: 160px
-		background: #000
+		height: 80px
+		background: url("../img/header_bg.jpg")
+		padding-left: 20px
 		display: flex
 		flex-direction: column
 		justify-content: center
@@ -274,7 +275,7 @@ header
 			justify-content: center
 			align-items: center
 			img
-				width: 60px
+				width: 200px
 				display: block
 				margin-right: 15px
 
@@ -396,7 +397,7 @@ header
 			display: none
 			
 		.deskmenu
-			width: 70%
+			width: 90%
 			// background: #189
 			ul
 				display: flex
@@ -409,15 +410,17 @@ header
 						height: 36px
 						color: #777
 						font-weight: 700
-						border: 1px solid none
+						border-bottom: 3px solid rgba(0,0,0,0)
 						font-size: 16px
-						padding: 0 18px
+						padding: 0 8px
+						margin: 0 10px
 						display: flex
 						justify-content: center
 						align-items: center
-						transition: all .3s  
+						transition: all .3s
 						&:hover
-							color: #900
+							// color: #900
+							border-bottom: 3px solid #ed7000
 							// transform: scale(1.02)
 					
 		.login_section
@@ -464,6 +467,7 @@ header
 		margin-top: 20px
 		.slider-desktop
 			+span(8)
+			margin-bottom: 30px	
 			.flexslider
 				background: #333
 				ul 
@@ -479,7 +483,7 @@ header
 		.aside_section
 			+span(4)
 				.content_btn
-					height: 100px
+					height: 140px
 					border: 2px solid #e3c8b6
 					margin-bottom: 10px
 					display: flex
@@ -595,20 +599,6 @@ header
 						color: #FFF
 
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -804,6 +794,7 @@ header
 						font-weight: 700
 						margin-right: 15px
 
+
 					.local_descript
 						font-size: 14px
 						color: #999
@@ -997,7 +988,8 @@ footer
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
 		width: 100%
-		margin-top: 30px
+		margin-top: 20px
+		margin-bottom: 30px
 		display: flex
 		justify-content: center
 		align-items: center
