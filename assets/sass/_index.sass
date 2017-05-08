@@ -5,18 +5,18 @@
 
 
 // shorthand
-$desktop: 12 (75px 20px) split
+$desktop: 12 (70px 30px) split
 $pad: 6 (80px 40px) split
 
 $w_desktop: 12 split
 $w_pad: 6 split
 
 
-$breakpoint_desktop: 864px
+$breakpoint_desktop: 891px
 $breakpoint_pad: 0 890px
 
-$breakpoint_show_bird: 1300px
-$breakpoint_no_bird: 0 1299px
+
+
 
 $susy: (debug: (image: hide))
 
@@ -85,7 +85,7 @@ $susy: (debug: (image: hide))
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
 		width: 100%
-		padding: 10px
+		padding: 10px 20px
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -97,7 +97,7 @@ $susy: (debug: (image: hide))
 			justify-content: flex-start			
 			align-items: center
 			.hoticon
-				margin-right: 10px
+				margin-right: 7px
 				i 
 					font-size: 25px
 			h4 
@@ -118,7 +118,7 @@ $susy: (debug: (image: hide))
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
 		width: 100%
-		padding: 10px 20px
+		padding: 5px 20px
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -189,7 +189,6 @@ $susy: (debug: (image: hide))
 	+susy-breakpoint($breakpoint_pad, $w_pad)
 		+container
 		display: none
-
 
 	+susy-breakpoint($breakpoint_desktop, $w_desktop)
 		+container
@@ -275,9 +274,10 @@ header
 			justify-content: center
 			align-items: center
 			img
-				width: 200px
+				width: 180px
 				display: block
 				margin-right: 15px
+				margin-top: 16px
 
 		.deskmenu
 			display: none
@@ -459,8 +459,97 @@ header
 .mainslider
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
-		
+		margin-top: 20px
+		.slider-desktop
+			+span(6)
+			margin-bottom: 10px	
+			.flexslider
+				background: #333
+				ul 
+					li 
+						// display: block
+						position: relative
+						display: flex
+						justify-content: center
+						align-items: center
+						img
+							width: 100%
+							display: block
+		.aside_section
+			+span(6)
+				.content_btn
+					height: 100px
+					border: 2px solid #e3c8b6
+					margin-bottom: 10px
+					display: flex
+					justify-content: center
+					align-items: center
 
+					.location_left
+						width: 50%
+						height: 100%
+						background: rgba(255, 243, 235, 1)
+						display: flex
+						flex-direction: column
+						justify-content: center
+						align-items: center
+						i 
+							font-size: 30px
+							margin-bottom: 5px
+							color: #888	
+						p 
+							font-size: 14px
+							color: #888	
+					.location_right
+						width: 50%
+						height: 100%
+						background: url("../img/ttt_01.jpg")
+						background-size: cover
+
+					.timeline_left
+						width: 50%
+						height: 100%
+						background: url("../img/ttt_02.jpg")
+						background-size: cover
+					
+					.timeline_right
+						width: 50%
+						height: 100%
+						background: rgba(255, 243, 235, 1)
+						display: flex
+						flex-direction: column
+						justify-content: center
+						align-items: center
+						i 
+							font-size: 30px
+							margin-bottom: 5px
+							color: #888	
+						p 
+							font-size: 14px
+							color: #888	
+
+					.subject_left
+						width: 50%
+						height: 100%
+						background: rgba(255, 243, 235, 1)
+						display: flex
+						flex-direction: column
+						justify-content: center
+						align-items: center
+						i 
+							font-size: 30px
+							margin-bottom: 5px
+							color: #888	
+						p 
+							font-size: 14px
+							color: #888	
+					
+					.subject_right
+						width: 50%
+						height: 100%
+						background: url("../img/ttt_03.jpg")
+						background-size: cover
+	
 
 	+susy-breakpoint($breakpoint_desktop, $desktop)
 		+container
@@ -559,7 +648,39 @@ header
 .search_section
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
-		
+		margin-bottom: 40px	
+		.search_item
+			background: url('../img/sbg.jpg') center bottom
+			padding: 25px 0 15px 0
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			border-top: 3px solid #db8f1a
+			p 
+				font-size: 12px
+				color: #c0c0c0
+			.search_go
+				width: 90%
+				margin-bottom: 5px
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				input[type="text"]
+					width: 80%
+					height: 40px
+				.serach_icon
+					width: 50px
+					height: 40px
+					display: flex
+					flex-direction: row
+					justify-content: center
+					align-items: center
+					background: #9c0007
+					cursor: pointer
+					i 
+						color: #FFF
 
 
 	+susy-breakpoint($breakpoint_desktop, $w_desktop)
@@ -677,39 +798,6 @@ header
 
 
 
-.bird-base
-	+susy-breakpoint($breakpoint_no_bird, $w_pad)
-		+container
-		display: none
-		
-
-	+susy-breakpoint($breakpoint_show_bird, $w_desktop)
-		+container
-		display: block
-		position: relative
-	
-		width: 100%
-		height: 150px
-		.asidebird
-			position: absolute
-			width: 270px
-			height: 276px
-			right: 0
-			bottom: 500px
-			z-index: 2000
-			img 
-				width: 100%
-		.uglyfrog
-			position: absolute
-			width: 250px
-			height: 118px
-			left: 30px
-			bottom: -60px
-			z-index: 2100
-			img 
-				width: 100%
-
-
 
 
 
@@ -720,17 +808,28 @@ header
 		margin-top: 40px
 		.onlinedisplay_content
 			+span(3)
-			padding: 0 15px
-			img
+			height: 170px
+			position: relative
+			margin-bottom: 20px
+			.photo_go
+				display: block
+				position: absolute
+				width: 120px
+				height: 120px
+				// background: #920
 				border-radius: 50%
-				width: 100%
+				overflow: hidden
+				left: 50%
+				margin-left: -60px
+				img
+					height: 100%
+
 			.mask
+				position: absolute
 				width: 100%
 				height: 40px
+				top: 130px
 				// background: rgba(0,0,0, .7)
-				display: flex
-				justify-content: center
-				align-items: center
 				p 
 					font-size: 14px
 					line-height: 1.4
@@ -745,17 +844,28 @@ header
 
 		.onlinedisplay_content
 			+span(2)
-			padding: 0 15px
-			img
+			height: 170px
+			position: relative
+			// background: #ddd
+			.photo_go
+				display: block
+				position: absolute
+				width: 120px
+				height: 120px
+				// background: #920
 				border-radius: 50%
-				width: 100%
+				overflow: hidden
+				left: 50%
+				margin-left: -60px
+				img
+					height: 100%
+
 			.mask
+				position: absolute
 				width: 100%
 				height: 40px
+				top: 130px
 				// background: rgba(0,0,0, .7)
-				display: flex
-				justify-content: center
-				align-items: center
 				p 
 					font-size: 14px
 					line-height: 1.4
@@ -765,6 +875,79 @@ header
 .three_section
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
+		margin-bottom: 40px
+		.section_a
+			+span(6)
+			padding: 0 10px
+
+			// background: #920
+			.localmemo
+				margin-bottom: 20px
+				.date
+					font-size: 20px
+					color: #fc9933
+					margin-bottom: 10px
+				.local_item
+					margin-bottom: 5px
+					border-bottom: 1px dashed #eee
+					padding: 10px 0
+					display: flex
+					justify-content: flex-start
+					align-items: flex-start
+					.year
+						font-size: 16px
+						color: #777
+						font-weight: 700
+						margin-right: 15px
+
+
+					.local_descript
+						font-size: 14px
+						color: #999
+
+			.newsvideo
+				margin-bottom: 20px
+				.newsvideo_item
+					margin-bottom: 5px
+					border-bottom: 1px dashed #eee
+					padding: 10px 0
+					display: flex
+					justify-content: center
+					align-items: flex-start
+					.year
+						font-size: 16px
+						color: #777
+						font-weight: 700
+						margin-right: 15px
+
+					.newsvideo_descript
+						font-size: 14px
+						color: #999
+
+			.todaycharacter
+				padding: 0 30px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				.p_id
+					display: flex
+					flex-direction: row
+					justify-content: flex-start
+					align-items: center
+					margin-bottom: 20px
+					img 
+						width: 45%
+						border-radius: 50%
+						margin-right: 20px
+					h6 
+						font-size: 16px
+						margin-bottom: 5px
+						color: #555
+						font-weight: 500
+				p 
+					font-size: 14px
+					color: #888
 
 
 
@@ -782,11 +965,11 @@ header
 					color: #fc9933
 					margin-bottom: 10px
 				.local_item
-					margin-bottom: 15px
+					margin-bottom: 5px
 					border-bottom: 1px dashed #eee
 					padding: 10px 0
 					display: flex
-					justify-content: center
+					justify-content: flex-start
 					align-items: flex-start
 					.year
 						font-size: 16px
@@ -801,7 +984,7 @@ header
 
 			.newsvideo
 				.newsvideo_item
-					margin-bottom: 15px
+					margin-bottom: 5px
 					border-bottom: 1px dashed #eee
 					padding: 10px 0
 					display: flex
@@ -964,7 +1147,8 @@ footer
 	+susy-breakpoint($breakpoint_pad, $pad)
 		+container
 		width: 100%
-		margin-top: 30px
+		margin-top: 10px
+		margin-bottom: 30px
 		display: flex
 		justify-content: center
 		align-items: center
