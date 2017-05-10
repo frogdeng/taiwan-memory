@@ -2843,8 +2843,8 @@ a {
     margin-bottom: 10px;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -ms-flex-align: start;
     align-items: flex-start; }
   .search_content .map_list_section .map_contnet .map_event .map_item img {
