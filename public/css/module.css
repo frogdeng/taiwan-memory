@@ -534,53 +534,7 @@ a {
     -ms-flex-align: center;
     align-items: center; }
   header .aside ul li .m-first .go_submenu i {
-    font-size: 30px; }
-  header .aside ul li .m-second_bg {
-    position: absolute;
-    width: 100%;
-    height: 2000px;
-    background: #222;
-    top: 110px;
-    right: -100%;
-    transition: all .5s ease; }
-  header .aside ul li .m-second_bg .goback {
-    margin: 0 10px;
-    color: #FFF;
-    width: 200px;
-    height: 48px;
-    margin-top: -20px;
-    margin-left: 20px;
-    padding-left: 20px;
-    cursor: pointer;
-    background-color: #555;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -ms-flex-align: center;
-    align-items: center; }
-  header .aside ul li .m-second_bg .goback i {
-    font-size: 20px;
-    margin-right: 10px; }
-  header .aside ul li .m-second_bg ul {
-    position: absolute;
-    width: 100%;
-    top: -20px; }
-  header .aside ul li .m-second_bg ul li .m-second {
-    display: block;
-    height: 50px;
-    width: 100%;
-    padding: 0 0 0 30px;
-    line-height: 1.4;
-    color: #999;
-    font-size: 15px;
-    border-bottom: 1px solid #555;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -ms-flex-align: center;
-    align-items: center; } }
+    font-size: 30px; } }
 
 @media (min-width: 891px) {
   header {

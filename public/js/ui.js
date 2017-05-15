@@ -7,6 +7,10 @@ $(function(){
 	  pagerCustom: '.bx-pager_1'
 	});	
 
+  $(".hamburg").click(function(){
+     $('.aside').delay(200).toggleClass("hamburg-open");
+     $(this).delay(200).toggleClass("active");
+    });
 
 
 });
@@ -23,10 +27,6 @@ $(function(){
 	// });
 
 
-	//   $(".hamburg").click(function(){
-	//      $('.aside').delay(200).toggleClass("hamburg-open");
-	//      $(this).delay(200).toggleClass("active");
-	//     });
 
 
 	//   $(".login_info_btn").click(function(){
