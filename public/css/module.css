@@ -3251,3 +3251,6 @@ h2 {
   line-height: 1.4;
   margin-bottom: 20px;
   color: #888; }
+
+.slick-dots li button:before {
+  font-size: 30px; }
